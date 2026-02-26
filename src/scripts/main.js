@@ -5,6 +5,7 @@ import { createSoybeanSeed } from "./seeds/soybean.js"
 import { createSunflowerSeed } from "./seeds/sunflower.js"
 import { createWheatSeed } from "./seeds/wheat.js"
 import { createPlan } from "./plan.js"
+import { addPlant, usePlants } from "./field.js"
 
 const yearlyPlan = createPlan()
 
@@ -15,12 +16,12 @@ const soyBeanSeed = createSoybeanSeed()
 const sunflowerSeed = createSunflowerSeed()
 const wheatSeed = createWheatSeed()
 
-console.log(createAsparagusSeed())
-console.log(createCornSeed())
-console.log(createPotatoSeed())
-console.log(createSoybeanSeed())
-console.log(createSunflowerSeed())
-console.log(createWheatSeed())
+const cornPlant = addPlant(cornSeed)
+const potatoPlant = addPlant(potatoSeed)
+const soyBeanPlant = addPlant(soyBeanSeed)
+const asparagusPlant = addPlant(asparagusSeed)
+const sunflowerPlant = addPlant(sunflowerSeed)
+const wheatPlant = addPlant(wheatSeed)
 
-
-
+const plantArray = usePlants()
+console.log(plantArray)
