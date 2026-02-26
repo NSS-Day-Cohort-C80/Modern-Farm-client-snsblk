@@ -34,3 +34,58 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Flexbox layout for plant names */
+.plantList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.plant {
+    flex: 0 0 calc(25% - 20px);  /* 4 columns */
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}

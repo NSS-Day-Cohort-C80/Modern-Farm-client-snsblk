@@ -8,25 +8,20 @@ import { createPlan } from "./plan.js"
 import { plantSeeds } from "./tractor.js"
 import { addPlant, usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
+import { Catalog } from "./catalog.js"
 
 const yearlyPlan = createPlan()
-
-const asparagusSeed = createAsparagusSeed()
-const cornSeed = createCornSeed()
-const potatoSeed = createPotatoSeed()
-const soyBeanSeed = createSoybeanSeed()
-const sunflowerSeed = createSunflowerSeed()
-const wheatSeed = createWheatSeed()
-
-const cornPlant = addPlant(cornSeed)
-const potatoPlant = addPlant(potatoSeed)
-const soyBeanPlant = addPlant(soyBeanSeed)
-const asparagusPlant = addPlant(asparagusSeed)
-const sunflowerPlant = addPlant(sunflowerSeed)
-const wheatPlant = addPlant(wheatSeed)
 
 plantSeeds(yearlyPlan)
 
 const plantArray = usePlants()
 const finalPlants = harvestPlants(plantArray)
 console.log(finalPlants)
+
+const mainContainer = document.querySelector("#container")
+
+const applicationHTML = `
+    ${Catalog(finalPlants)}
+`
+
+mainContainer.innerHTML = applicationHTML
