@@ -13,8 +13,8 @@ export const createPlan = () => {
 
     return plan
 }
-
-
+// const createPlans = createPlan()
+// console.log(createPlans)
 
 
 /*
@@ -28,5 +28,5 @@ const crop = function* () {
         const typeIdx = Math.floor(Math.random() * types.length)
         yield types[typeIdx]
     }
-}()
+}
 
