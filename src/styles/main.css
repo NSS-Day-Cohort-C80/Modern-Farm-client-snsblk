@@ -2,6 +2,7 @@
 
 /*Typography
 --------------------------------------------------------------*/
+/*
 body,
 button,
 input,
@@ -33,7 +34,7 @@ h1,h2,h3,h4,h5,h6 {
 .red {
     background-color: darksalmon;
 }
-
+*/
 * {
     margin: 0;
     padding: 0;
@@ -42,10 +43,12 @@ h1,h2,h3,h4,h5,h6 {
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #ee9c3f 100%);
     min-height: 100vh;
     padding: 20px;
 }
+
+
 
 #container {
     max-width: 1200px;
@@ -74,8 +77,10 @@ h1 {
 
 .plant {
     flex: 0 0 calc(25% - 20px);  /* 4 columns */
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #8dcbf5 0%, #6d76f5 100%);
     color: white;
+    border-left-color: #fdac32;
+    border-left: 3px solid #fdac32;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -85,7 +90,10 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+
 .plant:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-left-width: 5px;
 }

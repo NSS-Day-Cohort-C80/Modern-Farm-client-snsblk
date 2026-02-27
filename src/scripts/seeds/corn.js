@@ -1,6 +1,4 @@
 
-
-
 export const createCornSeed = () => {
     return [
         {
