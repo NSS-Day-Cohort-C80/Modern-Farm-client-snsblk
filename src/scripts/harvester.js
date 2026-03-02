@@ -5,16 +5,16 @@ This function will iterate the array processed by the plantSeeds function.
 export const harvestPlants = (plantsArray) => {
     let seedObjects = []
 
-    for (const bloomPlants of plantsArray ) {
+    for (const bloomPlant of plantsArray ) {
 
-        if (bloomPlants.type === "Corn"){
-            for (let index = 0; index < bloomPlants.output / 2; index++) {
-            seedObjects.push(bloomPlants)
+        if (bloomPlant.type === "Corn"){
+            for (let index = 0; index < bloomPlant.output / 2; index++) {
+                seedObjects.push(bloomPlant)
             }
         }
         else {
-            for (let index = 0; index < bloomPlants.output; index++) {
-            seedObjects.push(bloomPlants)
+            for (let index = 0; index < bloomPlant.output; index++) {
+                seedObjects.push(bloomPlant)
             }
         }
     }
